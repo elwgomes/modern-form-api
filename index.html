@@ -18,15 +18,15 @@
         <h1>sign up</h1>
         <div class="input-box">
             <i class="fa-solid fa-user"></i>
-            <input type="username" placeholder="type your username">
+            <input type="username" placeholder="type your username" required>
         </div>
         <div class="input-box">
             <i class="fa-solid fa-envelope"></i>
-            <input type="e-mail" placeholder="type your e-mail address">
+            <input type="e-mail" placeholder="type your e-mail address" required>
         </div> 
         <div class="input-box">   
             <i class="fa-solid fa-key"></i> 
-            <input type="password" placeholder="type your password" id="passwordInput">
+            <input type="password" placeholder="type your password" id="passwordInput" required>
         </div>
 
         <div class="input-box">
@@ -36,9 +36,11 @@
  
 
         <button type="button" class="btn-signin">sign up</button>
-        <span class="register">
+        <div class="register">
+        <span>
             Do you have an account?
         </span>
+        </div>
         <button class="btn-signup">sign in</button>
     </div>
     </div>
