@@ -14,7 +14,8 @@
 </head>
 <body>
     <div class="form-box">
-        <div class="login-card">
+        <div class="login-card"> 
+            <div class="login-container">
         <h1>sign up</h1>
         <div class="input-box">
             <i class="fa-solid fa-user"></i>
@@ -25,16 +26,13 @@
             <input type="e-mail" placeholder="type your e-mail address" required>
         </div> 
         <div class="input-box">   
-            <i class="fa-solid fa-key"></i> 
+            <i class="fa-solid fa-key"></i>
             <input type="password" placeholder="type your password" id="passwordInput" required>
         </div>
-
         <div class="input-box">
             <i class="fa-solid fa-phone"></i>
-            <input type="phone" placeholder="type your phone">
+            <input type="phone" id="phone" maxlength="15" pattern="\(\d{2}\)\s*\d{5} - \d{4}" placeholder="type your phone" required>
         </div>
- 
-
         <button type="button" class="btn-signin">sign up</button>
         <div class="register">
         <span>
@@ -44,6 +42,21 @@
         <button class="btn-signup">sign in</button>
     </div>
     </div>
-    <script></script>
+    </div>
+    <script>
+
+const phone = document.getElementById('phone') // Seletor do campo de telefone
+
+phone.addEventListener('keypress', (e) => mascaraTelefone(e.target.value)) // Dispara quando digitado no campo
+phone.addEventListener('change', (e) => mascaraTelefone(e.target.value)) // Dispara quando autocompletado o campo
+
+const mascaraTelefone = (value) => {
+    value = value.replace(/\D/g, "")
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2")
+    value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+    phone.value = value // Insere o(s) valor(es) no campo
+}
+
+    </script>
 </body>
 </html>
