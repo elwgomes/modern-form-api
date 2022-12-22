@@ -118,6 +118,7 @@ body {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
+
 }
 
 @media (max-width: 768px) {
@@ -131,7 +132,7 @@ body {
         content: '';
         position: relative;
         z-index: 1;
-        width: 270px;
+        width: 290px;
         background: rgba(255, 255, 255, 0.25);
         transform: rotate(-6deg);
         border-radius: 10px;
@@ -150,30 +151,15 @@ body {
 
     }
 
+    .form-box .input-box {
+        margin: 6px auto;
+        width: 75%;
+        border-bottom: 1px solid #808080;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
     .register {
         text-align: center;
     }
 }
-
-/* .form-box > .login-card {
-    width: 550px;
-    background: rgba(255, 255, 255, .5);
-    margin: 6% auto;
-    padding: 50px 0;
-    color: #fff;
-    box-shadow: 0 0 100px 2px rgba(0, 0, 0, 1);
-    border-radius: 10px;
-    transform: rotate(6deg);
-}
-
-.form-box {    
-
-    margin: auto;
-    content: '';
-    position: relative;
-    z-index: 1;
-    width: 550px;
-    background: rgba(255, 255, 255, 0.15);
-    transform: rotate(-6deg);
-    border-radius: 10px;
-} */
