@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/be3d9c9c7b.js" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/84ee29a570.js" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/84ee29a570.js" crossorigin="anonymous"></script>
     
-        <title>Modern Form</title>
+    
+
+    <title>Modern Form</title>
 </head>
 <body>
     <div class="form-box">
@@ -33,30 +35,17 @@
             <i class="fa-solid fa-phone"></i>
             <input type="phone" id="phone" maxlength="15" pattern="\(\d{2}\)\s*\d{5} - \d{4}" placeholder="type your phone" required>
         </div>
-        <button type="button" class="btn-signin">sign up</button>
+        <button type="button" class="btn-signup">sign up</button>
         <div class="register">
         <span>
             Do you have an account?
         </span>
         </div>
-        <button class="btn-signup">sign in</button>
+        <button class="btn-signin" onclick="location.href='/login.html'">sign in</button>
             </div>
         </div>
     </div>
-    <script>
-
-const phone = document.getElementById('phone')
-
-phone.addEventListener('keypress', (e) => maskPhone(e.target.value));
-phone.addEventListener('change', (e) => maskPhone(e.target.value));
-
-const maskPhone = (value) => {
-    value = value.replace(/\D/g, "");
-    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
-    value = value.replace(/(\d)(\d{4})$/, "$1-$2");
-    phone.value = value;
-}
-
-    </script>
+    
+    <script src="js/phone.js"></script>
 </body>
 </html>
